@@ -1,0 +1,491 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff8f2;
+  color: #222;
+}
+
+
+/* NAVBAR */
+
+nav {
+  height: 75px;
+  padding: 0 7%;
+
+  display: flex;
+  align-items: center;
+
+  background: white;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  box-shadow: 0 3px 15px #0002;
+}
+
+nav h1 {
+  color: #ff4d2d;
+}
+
+.nav-links {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #444;
+}
+
+button {
+  border: none;
+  background: #ff4d2d;
+  color: white;
+
+  padding: 11px 18px;
+
+  border-radius: 25px;
+
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #e63e21;
+}
+
+
+/* HERO */
+
+.hero {
+  min-height: 520px;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  color: white;
+
+  background:
+    radial-gradient(circle at 20% 30%, #ffcc70, transparent 30%),
+    radial-gradient(circle at 80% 70%, #ff477e, transparent 30%),
+    linear-gradient(135deg, #ff512f, #f09819);
+}
+
+.food-bg {
+  position: absolute;
+
+  width: 120%;
+  height: 120%;
+
+  font-size: 60px;
+  line-height: 2.3;
+  word-spacing: 25px;
+
+  opacity: 0.13;
+
+  transform: rotate(-8deg);
+
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content > p:first-child {
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.hero h2 {
+  font-size: 65px;
+  margin: 20px 0;
+}
+
+.hero h2 span {
+  color: #fff0c7;
+}
+
+.hero-content input {
+  margin-top: 30px;
+
+  width: 600px;
+  max-width: 90%;
+
+  padding: 18px 25px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 40px;
+
+  font-size: 16px;
+}
+
+
+/* SECTIONS */
+
+section:not(.hero) {
+  padding: 60px 8%;
+}
+
+section h2 {
+  margin-bottom: 30px;
+}
+
+
+/* CATEGORIES */
+
+.categories {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.categories button {
+  background: white;
+  color: #333;
+
+  border: 1px solid #eee;
+
+  padding: 13px 20px;
+}
+
+.categories button:hover {
+  background: #ff4d2d;
+  color: white;
+}
+
+
+/* RESTAURANTS */
+
+.restaurant-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 25px;
+}
+
+.restaurant {
+  background: white;
+
+  padding-bottom: 20px;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow: 0 7px 25px #0001;
+
+  transition: 0.3s;
+}
+
+.restaurant:hover {
+  transform: translateY(-7px);
+}
+
+.restaurant-icon {
+  height: 180px;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 85px;
+}
+
+.pizza {
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+}
+
+.burger {
+  background: linear-gradient(135deg, #f6d365, #fda085);
+}
+
+.indian {
+  background: linear-gradient(135deg, #ff9966, #ffcc33);
+}
+
+.chinese {
+  background: linear-gradient(135deg, #ff5f6d, #ffc371);
+}
+
+.restaurant h3,
+.restaurant p,
+.restaurant button {
+  margin-left: 20px;
+}
+
+.restaurant p {
+  color: #777;
+}
+
+
+/* MENU */
+
+#menu {
+  background: #fff;
+}
+
+.food-grid {
+  max-width: 850px;
+}
+
+.food-item {
+  background: white;
+
+  padding: 20px;
+
+  margin: 15px 0;
+
+  border-radius: 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  box-shadow: 0 4px 15px #0001;
+}
+
+.food-emoji {
+  font-size: 50px;
+
+  margin-right: 20px;
+}
+
+.food-info {
+  flex: 1;
+}
+
+.food-info h3 {
+  margin: 0;
+}
+
+.food-info p {
+  color: #777;
+}
+
+.price {
+  font-weight: bold;
+  color: #ff4d2d;
+  font-size: 18px;
+}
+
+
+/* CART */
+
+.cart-section {
+  background: #181818;
+
+  color: white;
+}
+
+.cart-row {
+  max-width: 800px;
+
+  padding: 15px;
+
+  margin: 10px 0;
+
+  background: #292929;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.cart-row span:first-child {
+  flex: 1;
+}
+
+.quantity button {
+  padding: 5px 12px;
+  border-radius: 5px;
+}
+
+.remove {
+  background: #d32f2f;
+}
+
+.bill {
+  max-width: 800px;
+
+  margin-top: 30px;
+
+  background: #242424;
+
+  padding: 25px;
+
+  border-radius: 15px;
+}
+
+.bill p {
+  display: flex;
+  justify-content: space-between;
+
+  color: #ccc;
+}
+
+.bill h3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* CHECKOUT */
+
+.checkout {
+  background: #fff8f2;
+}
+
+.checkout-box {
+  max-width: 600px;
+
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 15px;
+
+  box-shadow: 0 5px 20px #0001;
+}
+
+.checkout-box input,
+.checkout-box textarea {
+  width: 100%;
+
+  padding: 14px;
+
+  margin: 8px 0 15px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 8px;
+
+  outline: none;
+}
+
+.checkout-box textarea {
+  height: 100px;
+}
+
+.checkout-box label {
+  display: inline-block;
+
+  margin: 7px 0;
+}
+
+.checkout-box button {
+  margin-top: 20px;
+}
+
+
+/* SUCCESS */
+
+.success {
+  display: none;
+
+  text-align: center;
+
+  background: #e8f5e9;
+}
+
+.tracking {
+  max-width: 500px;
+
+  margin: 30px auto;
+
+  padding: 20px;
+
+  background: white;
+
+  border-radius: 15px;
+
+  text-align: left;
+}
+
+.tracking p {
+  padding: 10px;
+
+  border-bottom: 1px solid #eee;
+}
+
+
+/* FOOTER */
+
+footer {
+  padding: 50px;
+
+  text-align: center;
+
+  background: #111;
+
+  color: white;
+}
+
+footer h2 {
+  color: #ff4d2d;
+}
+
+
+/* MOBILE */
+
+@media(max-width: 900px) {
+
+  .restaurant-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media(max-width: 600px) {
+
+  nav {
+    padding: 10px 5%;
+  }
+
+  nav h1 {
+    font-size: 20px;
+  }
+
+  .nav-links {
+    gap: 8px;
+  }
+
+  .nav-links a {
+    display: none;
+  }
+
+  .hero h2 {
+    font-size: 42px;
+  }
+
+  .restaurant-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .food-item {
+    flex-wrap: wrap;
+  }
+
+}
